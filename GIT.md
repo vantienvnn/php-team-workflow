@@ -22,7 +22,7 @@ Please following our team GIT requirement conventions:
 
 How to Fork project repository?
 =====================
-for example: 
+For example: 
   - Project repository: https://github.com/project-username/childspass
   - Your repository: https://github.com/your-username/childspass
   
@@ -42,6 +42,8 @@ git remote add upstream https://github.com/project-username/childspass.git
 // update data from your repository and project repository
 git fetch --all
 ```
+
+For more information, you can read [here](https://help.github.com/articles/fork-a-repo/)
 
 
 
