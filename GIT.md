@@ -1,0 +1,27 @@
+Git process workflow
+=====================
+
+Please following our team GIT requirement conventions:
+
+- Fork project repository to your GitHub account and please make sure you don't working on project repository.
+- Create one branch from test branch for each your task on JIRA
+- When you do finished your task:
+  - Rebase your branch with test branch in Project Repository before finish your task
+  - Make sure one commit for one Pull Request, else plesae combine it
+  - Create a Pull Request on Github in Your Repostiory to Project Repository
+  - Make sure you will Pull Request to test branch in Project Repository
+  - The Pull Request name should be like this format: Task {task-name}
+  - The Pull Request description should have JIRA task URL
+- When you do created your Pull Request:
+  - If have conflict message form Github you are forgot rebase test branch from Project Repository
+  - You can pick other task on waiting Simble CI checking your Pull Request
+  - Please send a message to our team group chat in Slack when the Simble CI status is green
+  - If Simble CI status have red, you can check error message in link of Simble CI status
+  - When you push new code to your branch, the Pull Request will auto update and the Simble CI will re-build again.
+    So please don't push code again if you are not have checked you task
+
+How to Fork project repository?
+=====================
+for example: 
+  - Project repository: https://github.com/project-username/childspass
+  - Your repository: https://github.com/your-username/childspass
