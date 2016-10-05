@@ -32,3 +32,16 @@ Forking a repository is a simple two-step process. We've created a repository fo
 
 ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/fork.PNG)
 
+Example git comamnd:
+
+```git
+# clone to your local
+git clone https://github.com/your-username/childspass.git
+# add upstream to project repository
+git remote add upstream https://github.com/project-username/childspass.git
+# update data from your repository and project repository
+git fetch --all
+```
+
+
+
