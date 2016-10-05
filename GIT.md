@@ -6,7 +6,7 @@ Please following our team GIT requirement conventions:
 - Fork project repository to your GitHub account and please make sure you don't working on project repository.
 - Create one branch from test branch for each your task on JIRA
 - When you do finished your task:
-  - Rebase your branch with test branch in Project Repository before finish your task
+  - Rebase your branch with test branch in Project Repository
   - Make sure one commit for one Pull Request, else plesae combine it
   - Create a Pull Request on Github in Your Repostiory to Project Repository
   - Make sure you will Pull Request to test branch in Project Repository
@@ -25,3 +25,9 @@ How to Fork project repository?
 for example: 
   - Project repository: https://github.com/project-username/childspass
   - Your repository: https://github.com/your-username/childspass
+  
+Forking a repository is a simple two-step process. We've created a repository for you to practice with!
+- On GitHub, navigate to the octocat/Spoon-Knife repository.
+- Fork buttonIn the top-right corner of the page, click Fork.
+![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/screenshots/fork.PNG)
+
