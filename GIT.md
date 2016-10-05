@@ -1,7 +1,7 @@
 Git process workflow
 =====================
 
-Please following our team GIT requirement conventions:
+Please following our GIT convention requirement:
 
 - Fork project repository to your GitHub account and please make sure you don't working on project repository.
 - Create one branch from test branch for each your task on JIRA
