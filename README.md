@@ -2,7 +2,7 @@
 
 ####[PHP](./PHP.md)
 ####[JAVASCRIPT](./JS.md)
-####[CSS](./CSS.md)
+####[HML & CSS](./HTML.md)
 
 #Simble's GIT requirement
 
