@@ -6,6 +6,7 @@ Please following our GIT convention requirement:
 - Fork project repository to your GitHub account
 - Make sure you do not push, merge to project repository
 - Create one branch from test branch for each your tasks on JIRA
+- Make sure end of text files (css, js, php ...) will have one black line
 - When you do finished your task:
   - Rebase your branch with test branch in Project Repository
   - Make sure one commit for one Pull Request ( PR )
@@ -88,8 +89,10 @@ git commit --amend
 git push origin <branch-name> -f
 ```
 
-How to rebase your branch with project repository branch?
+How to rebase your branch?
 =====================
+(This function will keep your local branch are updated with project branch)
+
 Please make sure your are added upstream as above document
 ```php
 git fetch --all
@@ -98,17 +101,18 @@ git rebase upstream/test
 git push origin <branch-name> -f
 ```
 If you have conflict in rebase process
-- If you don't edit the
-  ```php
-  git checkout --ours file-name-1 file-name-2
-  ```
+- If you don't edit the conflict file? you can fast resolved by:
+```php
+git checkout --ours file-name-1 file-name-2
+// this action will remove you changed
+```
 - Else please resolved the conflict files
 - When you have resolved all conflict files
-  ```php
-  git add .
-  git rebase --continue
-  git push origin <branch-name> -f
-  ```
+```php
+git add .
+git rebase --continue
+git push origin <branch-name> -f
+```
   
 How to update other member PR to your local?
 =====================
@@ -132,12 +136,17 @@ Simble CI is a tool for auto check your PR, so when Simble CI will run test for 
   So, Just re-update (push) your branch when you have test you code are fixed all errors
 
 What is Simble CI status?
-- Your PR is test is succeed
- ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci_ok.PNG)
-- Your PR is test is failed
- ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci_fail.PNG)
+- Your PR test result is succeed
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci-ok.PNG)
+- Your PR test result is failed
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci-fail.PNG)
 
 How to check error message in Simble CI?
 - Click details link in Simble CI status
 - Login to Simble CI system
 - Click console menu in left sidebar of Simble CI
+
+Other Tips:
+=====================
+How to dectect missing new line in end of file?
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/missing_newline.PNG)
