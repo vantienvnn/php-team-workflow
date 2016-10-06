@@ -102,6 +102,7 @@ Fetch to your local and create new branch for test:
 ```php
 // git fetch upstream  pull/<pull request id>/head:<new branch name in your local>
 git fetch upstream pull/12/head:test-kapo-task-sim224
+git checkout test-kapo-task-sim224
 ```
 Pull to your current branch for depend task:
 ```php
