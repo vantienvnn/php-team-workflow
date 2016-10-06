@@ -94,8 +94,22 @@ Please make sure your are added upstream as above document
 ```php
 git fetch --all
 git rebase upstream/test
+// if not have conflict
+git push origin <branch-name> -f
 ```
-
+If you have conflict in rebase process
+- If you don't edit the
+  ```php
+  git checkout --ours file-name-1 file-name-2
+  ```
+- Else please resolved the conflict files
+- When you have resolved all conflict files
+  ```php
+  git add .
+  git rebase --continue
+  git push origin <branch-name> -f
+  ```
+  
 How to update other member PR to your local?
 =====================
 Fetch to your local and create new branch for test:
@@ -109,3 +123,21 @@ Pull to your current branch for depend task:
 // git pull upstream  pull/<pull request id>/head
 git pull upstream pull/12/head
 ```
+
+What Simble CI
+=====================
+Simble CI is a tool for auto check your PR, so when Simble CI will run test for you PR?
+- You are create a new PR
+- When you push new/amend commits in branch of PR to your repository
+  So, Just re-update (push) your branch when you have test you code are fixed all errors
+
+What is Simble CI status?
+- Your PR is test is succeed
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci_ok.PNG)
+- Your PR is test is failed
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci_fail.PNG)
+
+How to check error message in Simble CI?
+- Click details link in Simble CI status
+- Login to Simble CI system
+- Click console menu in left sidebar of Simble CI
