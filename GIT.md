@@ -101,17 +101,17 @@ git push origin <branch-name> -f
 ```
 If you have conflict in rebase process
 - If you don't edit the conflict file? you can fast resolved by:
-  ```php
-  git checkout --ours file-name-1 file-name-2
-  // this action will remove you changed
-  ```
+```php
+git checkout --ours file-name-1 file-name-2
+// this action will remove you changed
+```
 - Else please resolved the conflict files
 - When you have resolved all conflict files
-  ```php
-  git add .
-  git rebase --continue
-  git push origin <branch-name> -f
-  ```
+```php
+git add .
+git rebase --continue
+git push origin <branch-name> -f
+```
   
 How to update other member PR to your local?
 =====================
