@@ -6,6 +6,7 @@ Please following our GIT convention requirement:
 - Fork project repository to your GitHub account
 - Make sure you do not push, merge to project repository
 - Create one branch from test branch for each your tasks on JIRA
+- Make sure end of text files (css, js, php ...) will have one black line
 - When you do finished your task:
   - Rebase your branch with test branch in Project Repository
   - Make sure one commit for one Pull Request ( PR )
@@ -144,3 +145,8 @@ How to check error message in Simble CI?
 - Click details link in Simble CI status
 - Login to Simble CI system
 - Click console menu in left sidebar of Simble CI
+
+Other Tips:
+=====================
+How to dectect missing new line in end of file?
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/missing_newline.PNG)
