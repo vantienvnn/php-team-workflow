@@ -1,8 +1,7 @@
 #Simble's coding standard
 
 ####[PHP](./PHP.md)
-####[JAVASCRIPT](./JS.md)
-####[HML & CSS](./HTML.md)
+####[HML & CSS && JS](./HTML.md)
 
 #Simble's GIT requirement
 
