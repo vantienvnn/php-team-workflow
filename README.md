@@ -1,6 +1,3 @@
-Team workflow
-=====================
-
 #Simble's coding standard
 
 ####[PHP](./PHP.md)
