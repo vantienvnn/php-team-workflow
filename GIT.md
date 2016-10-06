@@ -133,9 +133,9 @@ Simble CI is a tool for auto check your PR, so when Simble CI will run test for 
 
 What is Simble CI status?
 - Your PR is test is succeed
- ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci_ok.PNG)
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci-ok.PNG)
 - Your PR is test is failed
- ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci_fail.PNG)
+ ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci-fail.PNG)
 
 How to check error message in Simble CI?
 - Click details link in Simble CI status
