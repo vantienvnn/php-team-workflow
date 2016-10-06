@@ -132,9 +132,9 @@ Simble CI is a tool for auto check your PR, so when Simble CI will run test for 
   So, Just re-update (push) your branch when you have test you code are fixed all errors
 
 What is Simble CI status?
-- Your PR is test is succeed
+- Your PR test result is succeed
  ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci-ok.PNG)
-- Your PR is test is failed
+- Your PR test result is failed
  ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/simble-ci-fail.PNG)
 
 How to check error message in Simble CI?
