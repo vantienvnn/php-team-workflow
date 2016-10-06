@@ -173,7 +173,7 @@ or method-level.
 Method names MUST be declared in `camelCase()`.
 
 
-Coding Style Guide
+Coding Style Guide PSR-2
 ==================
 
 This guide extends and expands on [PSR-1], the basic coding standard.
