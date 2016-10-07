@@ -101,13 +101,9 @@ git rebase upstream/test
 git push origin <branch-name> -f
 ```
 If you have conflict in rebase process
-- If you don't edit the conflict file? you can fast resolved by (please don't use this if you not sure):
-```php
-git checkout --ours file-name-1 file-name-2
-// this action will remove you changed
-```
-- Else please resolved the conflict files
-- When you have resolved all conflict files
+- You can't not use git checkout command if don't know it
+- Resolve the conflict files
+- When you have resolved all conflict files:
 ```php
 git add .
 git rebase --continue
