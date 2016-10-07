@@ -101,7 +101,7 @@ git rebase upstream/test
 git push origin <branch-name> -f
 ```
 If you have conflict in rebase process
-- If you don't edit the conflict file? you can fast resolved by:
+- If you don't edit the conflict file? you can fast resolved by (please don't use this if you not sure):
 ```php
 git checkout --ours file-name-1 file-name-2
 // this action will remove you changed
@@ -148,5 +148,9 @@ How to check error message in Simble CI?
 
 Other Tips:
 =====================
-How to dectect missing new line in end of file?
+- How to dectect missing new line in end of file?
  ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/missing_newline.PNG)
+- How to keep your code is safe on rebase?
+ - Don't commit --amend to another guys commit
+ - Review your PR code after rebase
+ - Check other guys PR for sure they don't change your code
