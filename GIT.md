@@ -51,6 +51,8 @@ How to create new branch for each task?
 If your task on JIRA is named are SIM 201, so you should create a branch like as:
 ```php
 git checkout -b sim-201 origin/test
+// Rebase upstream test before do anything
+git rebase upstream/test
 ```
 
 How about have one commit for PR?
