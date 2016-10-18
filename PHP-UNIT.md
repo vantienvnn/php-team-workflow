@@ -26,6 +26,8 @@ class EmailRepository
 
     public function sendBookingEmail($email)
     {
+        $emailModel = new EmailModel(array('email' => $email));
+        $emailModel->save();
         return $this->client->send('Any Value', $email);
     }
 
