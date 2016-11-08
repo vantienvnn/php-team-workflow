@@ -52,6 +52,7 @@ If your task on JIRA is named are SIM 201, so you should create a branch like as
 ```php
 git checkout -b sim-201 origin/test
 // Rebase upstream test before do anything
+git fetch --all
 git rebase upstream/test
 ```
 
