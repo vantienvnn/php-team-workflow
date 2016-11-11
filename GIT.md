@@ -50,7 +50,10 @@ How to create new branch for each task?
 =====================
 If your task on JIRA is named are SIM 201, so you should create a branch like as:
 ```php
-git checkout -b sim-201 origin/test
+// checkout to test branch first
+git checkout test
+// create new branch
+git checkout -b sim-201
 // Rebase upstream test before do anything
 git fetch --all
 git rebase upstream/test
