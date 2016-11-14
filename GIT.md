@@ -130,7 +130,7 @@ Pull to your current branch for depend task:
 git pull upstream pull/12/head
 ```
 
-Pull to your current branch for testing PR (that command will deleted your change):
+Pull to your current branch for testing PR (this command will deleted your change):
 ```php
 // git pull upstream  pull/<pull request id>/head -X theirs
 git pull upstream pull/12/head -X theirs
