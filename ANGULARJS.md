@@ -10,11 +10,19 @@
 ├── app
 │   ├── app.js
 │   ├── directives
+│   │   ├── calendars
+│   │   │   ├── calendars.directive.js
+│   │   │   ├── calendars.controller.js
+│   │   │   └── calendars.html
+│   │   │   └── calendars.scss
+│   │   ├── maps
+│   │   │   ├── maps.directive.js
+│   │   │   ├── maps.controller.js
 │   ├── filters
 │   └── services
-│       ├── auth.service.js
-│       ├── listing.service.js
-│       ├── business.service.js
+│   │   ├── auth.service.js
+│   │   ├── listing.service.js
+│   │   ├── business.service.js
 │   ├── frontdesk
 │   │   ├── calendars
 │   │   │   ├── calendars.controller.js
@@ -25,17 +33,24 @@
 │   │   │   └── bookings.controller.js
 │   │   │   └── bookings.html
 │   └── setting
-│       ├── listings
-│       │   └── listings.controller.js
-│       │   └── listings.modules.js
-│       ├── businesses
-│       │   ├── businesses.controller.js
-│       │   ├── businesses.module.js
-│       │   └── businesses.scss
-│       │   └── businesses.html
-│       ├── ...
-├── partials
-├── lib
+│   │   ├── listings
+│   │   │   └── listings.controller.js
+│   │   │   └── listings.modules.js
+│   │   ├── businesses
+│   │   │   ├── businesses.controller.js
+│   │   │   ├── businesses.module.js
+│   │   │   └── businesses.scss
+│   │   │   └── businesses.html
+│   │   ├── ...
+├── layout
+│   │   ├── headers
+│   │   │   └── headers.controller.js
+│   │   │   └── headers.html
+│   │   ├── footers
+│   │   │   ├── footers.controller.js
+│   │   │   ├── footers.scss
+│   │   │   └── footers.html
+│   │   ├── ...
 └── e2e-tests
 ```
  
