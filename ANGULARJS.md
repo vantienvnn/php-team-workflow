@@ -86,4 +86,36 @@ angular
 
 function SomeController() { }
 ```
-* sdsd
+* Define small functions, no more than 50 lines (less is better) for easier to maintain and debug.
+* Let sure you code can run with 'use strict'; in header of javascript files
+* Let sure you code can run in an Immediately Invoked Function Expression (will wraping automatic by webpack) for example:
+```Javascript
+/**
+ * recommended
+ *
+ * no globals are left behind
+ */
+
+// -> logger.js
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
+        .factory('logger', logger);
+
+    function logger() { }
+})();
+
+// -> storage.js
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
+        .factory('storage', storage);
+
+    function storage() { }
+})();
+```
+* Modules Naming should be begin with app. prefix, for example: app.settings.listings, app.frontdesk.calendars
