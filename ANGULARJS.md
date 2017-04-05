@@ -1,7 +1,9 @@
 ## Table of Contents
 
-  1. [Naming conventions](#naming-conventions)
-  1. [IIFE](#iife)
+  1. [Directory structure and naming conventions](#directory-structure-and-naming-conventions)
+  1. [Angular $ Wrapper Services](#angular-$-wrapper-services)
+  1. [Code Strict Mode](#code-strict-mode)
+  1. [Testing](#testing)
  
 ## Directory structure and naming conventions
 
@@ -87,38 +89,23 @@ angular
 function SomeController() { }
 ```
 * Define small functions, no more than 50 lines (less is better) for easier to maintain and debug.
-* Let sure you code can run with 'use strict'; in header of javascript files
-* Let sure you code can run in an Immediately Invoked Function Expression (will wraping automatic by webpack) for example:
+* Append the controller name with the suffix Controller, Service for service
+* Modules Naming should be begin with app. prefix, for example: app.settings.listings, app.frontdesk.calendars
+* Use consistent names for all directives using camel-case. Use a short prefix to describe the area that the directives belong (some example are company prefix or project prefix)
 ```Javascript
 /**
  * recommended
- *
- * no globals are left behind
  */
 
-// -> logger.js
-(function() {
-    'use strict';
+// avenger-profile.directive.js
+angular
+    .module
+    .directive('xxAvengerProfile', xxAvengerProfile);
 
-    angular
-        .module('app')
-        .factory('logger', logger);
+// usage is <xx-avenger-profile> </xx-avenger-profile>
 
-    function logger() { }
-})();
-
-// -> storage.js
-(function() {
-    'use strict';
-
-    angular
-        .module('app')
-        .factory('storage', storage);
-
-    function storage() { }
-})();
+function xxAvengerProfile() { }
 ```
-* Modules Naming should be begin with app. prefix, for example: app.settings.listings, app.frontdesk.calendars
 * When using a module, avoid using a variable and instead use chaining with the getter syntax.
 Why?: This produces more readable code and avoids variable collisions or leaks.
 ```Javascript
@@ -302,3 +289,42 @@ function config($routeProvider) {
 <div>
 </div>
 ```
+# Angular $ Wrapper Services
+* Use $document and $window instead of document and window.
+* Use $timeout and $interval instead of setTimeout and setInterval .
+# Code Strict Mode
+* To know what strict mode please read here: https://www.w3schools.com/js/js_strict.asp
+* Let sure you code can run with 'use strict'; in header of javascript files
+* Let sure you code can run in an Immediately Invoked Function Expression (will be wraping automatic by webpack) for example:
+```Javascript
+/**
+ * recommended
+ *
+ * no globals are left behind
+ */
+
+// -> logger.js
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
+        .factory('logger', logger);
+
+    function logger() { }
+})();
+
+// -> storage.js
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
+        .factory('storage', storage);
+
+    function storage() { }
+})();
+```
+# Testing
+
+( will update in next time )
