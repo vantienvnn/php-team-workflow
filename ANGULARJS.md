@@ -57,4 +57,33 @@
 ## Code Rules
 
 * Define 1 component per file, recommended to be less than 400 lines of code.
+It mean please don't put controllers, services ... to one file
+```Javascript
+/* avoid */
+angular
+    .module('app', ['ngRoute'])
+    .controller('SomeController', SomeController)
+    .factory('someFactory', someFactory);
+
+function SomeController() { }
+function someFactory() { }
+```
+The same components are now separated into their own files.
+```Javascript
+/* recommended */
+
+// -> app.module.js
+angular
+    .module('app', ['ngRoute']);
+```
+```Javascript
+/* recommended */
+
+// -> some.controller.js
+angular
+    .module('app')
+    .controller('SomeController', SomeController);
+
+function SomeController() { }
+```
 * sdsd
