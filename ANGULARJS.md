@@ -32,7 +32,7 @@
 │   │   ├── bookings
 │   │   │   └── bookings.controller.js
 │   │   │   └── bookings.html
-│   └── setting
+│   ├── setting
 │   │   ├── listings
 │   │   │   └── listings.controller.js
 │   │   │   └── listings.modules.js
@@ -42,7 +42,7 @@
 │   │   │   └── businesses.scss
 │   │   │   └── businesses.html
 │   │   ├── ...
-├── layout
+│   ├── layout
 │   │   ├── headers
 │   │   │   └── headers.controller.js
 │   │   │   └── headers.html
@@ -54,14 +54,7 @@
 └── e2e-tests
 ```
  
-## Naming conventions
-The following table is shown the naming conventions for every element:
+## Code Rules
 
-Element | Naming style | Example | usage
-----|------|----|--------
-Modules | lowerCamelCase  | angularApp |
-Controllers | Functionality + 'Controller'  | AdminController |
-Directives | lowerCamelCase  | userInfo |
-Filters | lowerCamelCase | userFilter |
-Services | UpperCamelCase | User | constructor
-Factories | lowerCamelCase | dataFactory | others
+* Define 1 component per file, recommended to be less than 400 lines of code.
+* sdsd
