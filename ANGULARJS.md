@@ -7,6 +7,7 @@
  
 ## Directory structure and naming conventions
 
+Let follow like as this example
 ```
 .
 ├── app
@@ -55,7 +56,76 @@
 │   │   ├── ...
 └── e2e-tests
 ```
- 
+
+## Basic Coding Standard
+
+### 1. Lines
+There MUST NOT be a hard limit on line length.
+
+The soft limit on line length MUST be 120 characters; automated style checkers MUST warn but MUST NOT error at the soft limit.
+
+Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD be split into multiple subsequent lines of no more than 80 characters each.
+
+There MUST NOT be trailing whitespace at the end of non-blank lines.
+
+Blank lines MAY be added to improve readability and to indicate related blocks of code.
+
+There MUST NOT be more than one statement per line.
+
+### 2. Indenting
+
+Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
+
+N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid problems with diffs, patches, history, and annotations. The use of spaces also makes it easy to insert fine-grained sub-indentation for inter-line alignment.
+
+### 3. if, elseif, else
+
+An if structure looks like the following. Note the placement of parentheses, spaces, and braces; and that else and elseif are on the same line as the closing brace from the earlier body.
+
+```Javascript
+if (expr1) {
+    // if body
+} elseif (expr2) {
+    // elseif body
+} else {
+    // else body;
+}
+The keyword elseif SHOULD be used instead of else if so that all control keywords look like single words.
+```
+
+### 4. switch, case
+
+A switch structure looks like the following. Note the placement of parentheses, spaces, and braces. The case statement MUST be indented once from switch, and the break keyword (or other terminating keyword) MUST be indented at the same level as the case body. There MUST be a comment such as // no break when fall-through is intentional in a non-empty case body.
+
+```Javascript
+switch (expr) {
+    case 0:
+        echo 'First case, with a break';
+        break;
+    case 1:
+        echo 'Second case, which falls through';
+        // no break
+    case 2:
+    case 3:
+    case 4:
+        echo 'Third case, return instead of break';
+        return;
+    default:
+        echo 'Default case';
+        break;
+}
+```
+### 5. while, do and same same functions ...
+
+A while statement looks like the following. Note the placement of parentheses, spaces, and braces.
+
+```Javascript
+while (expr) {
+    // structure body
+}
+Similarly, a do while statement looks like the following. Note the placement of parentheses, spaces, and braces.
+```
+
 ## Code Rules
 
 * Define 1 component per file, recommended to be less than 400 lines of code.
