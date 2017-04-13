@@ -128,7 +128,7 @@ Similarly, a do while statement looks like the following. Note the placement of 
 
 ## Code Rules
 
-* Define 1 component per file, recommended to be less than 400 lines of code.
+### 1. Define 1 component per file, recommended to be less than 400 lines of code.
 It mean please don't put controllers, services ... to one file
 ```Javascript
 /* avoid */
@@ -158,10 +158,12 @@ angular
 
 function SomeController() { }
 ```
-* Define small functions, no more than 50 lines (less is better) for easier to maintain and debug.
-* Append the controller name with the suffix Controller, Service for service
-* Modules Naming should be begin with app. prefix, for example: app.settings.listings, app.frontdesk.calendars
-* Use consistent names for all directives using camel-case. Use a short prefix to describe the area that the directives belong (some example are company prefix or project prefix)
+### 2. Define small functions, no more than 50 lines (less is better) for easier to maintain and debug.
+### 3. Append the controller name with the suffix Controller, Service for service
+### 4. Modules Naming should be begin with app. prefix, for example: app.settings.listings, app.frontdesk.calendars
+### 5. Completely remove var, only use let or const
+Declare a variable by var can lead to many bugs because you can declare a variable twice. let and const keyword only allow you declare a variable once. Using const when you don't want to change the value of variable.
+### 6. Use consistent names for all directives using camel-case. Use a short prefix to describe the area that the directives belong (some example are company prefix or project prefix)
 ```Javascript
 /**
  * recommended
@@ -176,7 +178,7 @@ angular
 
 function xxAvengerProfile() { }
 ```
-* When using a module, avoid using a variable and instead use chaining with the getter syntax.
+### 7. When using a module, avoid using a variable and instead use chaining with the getter syntax.
 Why?: This produces more readable code and avoids variable collisions or leaks.
 ```Javascript
 /* avoid */
@@ -191,7 +193,7 @@ angular
 
 function SomeController() { }
 ```
-* Only set once and get for all other instances.
+### 8. Only set once and get for all other instances.
 Why?: A module should only be created once, then retrieved from that point and after.
 ```Javascript
 /* recommended */
@@ -202,7 +204,7 @@ angular.module('app', []);
 // to get a module
 angular.module('app');
 ```
-* Use named functions instead of passing an anonymous function in as a callback.
+### 9. Use named functions instead of passing an anonymous function in as a callback.
 Why?: This produces more readable code, is much easier to debug, and reduces the amount of nested callback code.
 ```Javascript
 /* avoid */
@@ -219,7 +221,7 @@ angular
 
 function DashboardController() { }
 ```
-* Use the controllerAs syntax over the classic controller with $scope syntax.
+### 10. Use the controllerAs syntax over the classic controller with $scope syntax.
 ```Html
 <!-- avoid -->
 <div ng-controller="CustomerController">
@@ -230,7 +232,7 @@ function DashboardController() { }
     {{ customer.name }}
 </div>
 ```
-* Use a capture variable for this when using the controllerAs syntax. Choose a consistent variable name such as vm, which stands for ViewModel.
+### 11. Use a capture variable for this when using the controllerAs syntax. Choose a consistent variable name such as vm, which stands for ViewModel.
 ```Javascript
 /* avoid */
 function CustomerController() {
@@ -244,7 +246,7 @@ function CustomerController() {
     vm.sendMessage = function() { };
 }
 ```
-* Place bindable members at the top of the controller, alphabetized, and not spread through the controller code.
+### 12. Place bindable members at the top of the controller, alphabetized, and not spread through the controller code.
 ```Javascript
 /* avoid */
 function SessionsController() {
@@ -275,7 +277,7 @@ function SessionsController() {
     }
 }
 ```
-* Defer logic in a controller by delegating to services and factories.
+### 13. Defer logic in a controller by delegating to services and factories.
 ```Javascript
 /* avoid */
 function OrderController($http, $q, config, userInfo) {
@@ -315,7 +317,7 @@ function OrderController(creditService) {
     }
 }
 ```
-* When a controller must be paired with a view and either component may be re-used by other controllers or views, define controllers along with their routes.
+### 14. When a controller must be paired with a view and either component may be re-used by other controllers or views, define controllers along with their routes.
 ```Javascript
  /* avoid - when using with a route and dynamic pairing is desired */
 
@@ -359,10 +361,10 @@ function config($routeProvider) {
 <div>
 </div>
 ```
-# Angular $ Wrapper Services
+## Angular $ Wrapper Services
 * Use $document and $window instead of document and window.
 * Use $timeout and $interval instead of setTimeout and setInterval .
-# Code Strict Mode
+## Code Strict Mode
 * To know what strict mode please read here: https://www.w3schools.com/js/js_strict.asp
 * Let sure you code can run with 'use strict'; in header of javascript files
 * Let sure you code can run in an Immediately Invoked Function Expression (will be wraping automatic by webpack) for example:
@@ -395,6 +397,6 @@ function config($routeProvider) {
     function storage() { }
 })();
 ```
-# Testing
+## Testing
 
 ( will update in next time )
