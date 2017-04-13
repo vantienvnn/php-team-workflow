@@ -11,50 +11,48 @@ Let follow like as this example
 ```
 .
 ├── app
-│   ├── app.js
-│   ├── directives
+│   ├── app.modules.js
+│   ├── cores
+│   │   ├── auth.service.js
+│   │   ├── core.module.js
 │   │   ├── calendars
 │   │   │   ├── calendars.directive.js
 │   │   │   ├── calendars.controller.js
-│   │   │   └── calendars.html
+│   │   │   ├── calendars.html
 │   │   │   └── calendars.scss
 │   │   ├── maps
 │   │   │   ├── maps.directive.js
 │   │   │   ├── maps.controller.js
-│   ├── filters
-│   └── services
-│   │   ├── auth.service.js
-│   │   ├── listing.service.js
-│   │   ├── business.service.js
-│   ├── frontdesk
-│   │   ├── calendars
-│   │   │   ├── calendars.controller.js
-│   │   │   ├── calendars.module.js
-│   │   │   └── calendars.html
-│   │   │   └── calendars.scss
-│   │   ├── bookings
-│   │   │   └── bookings.controller.js
-│   │   │   └── bookings.html
-│   ├── setting
-│   │   ├── listings
-│   │   │   └── listings.controller.js
-│   │   │   └── listings.modules.js
-│   │   ├── businesses
-│   │   │   ├── businesses.controller.js
-│   │   │   ├── businesses.module.js
-│   │   │   └── businesses.scss
-│   │   │   └── businesses.html
-│   │   ├── ...
-│   ├── layout
-│   │   ├── headers
-│   │   │   └── headers.controller.js
-│   │   │   └── headers.html
-│   │   ├── footers
-│   │   │   ├── footers.controller.js
-│   │   │   ├── footers.scss
-│   │   │   └── footers.html
-│   │   ├── ...
+│   ├── calendars
+│   │   ├── calendars.controller.js
+│   │   ├── calendars.module.js
+│   │   ├── calendars.html
+│   │   └── calendars.scss
+│   ├── bookings
+│   │   ├── bookings.controller.js
+│   │   ├── bookings.service.js
+│   │   └── bookings.html
+│   ├── listings
+│   │   ├── listings.controller.js
+│   │   ├── listings.service.js
+│   │   └── listings.modules.js
+│   ├── businesses
+│   │   ├── businesses.controller.js
+│   │   ├── businesses.module.js
+│   │   ├── businesses.service.js
+│   │   ├── businesses.scss
+│   │   ├── businesses.html
+│   │   └── ...
+│   ├── layouts
+│   │   ├── headers.controller.js
+│   │   ├── headers.html
+│   │   ├── footers.controller.js
+│   │   ├── footers.scss
+│   │   ├── footers.html
+│   │   └── ...
+│   ├── main.js
 └── e2e-tests
+
 ```
 
 ## Basic Coding Standard
