@@ -76,19 +76,18 @@ Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
 
 N.b.: Using only spaces, and not mixing spaces with tabs, helps to avoid problems with diffs, patches, history, and annotations. The use of spaces also makes it easy to insert fine-grained sub-indentation for inter-line alignment.
 
-### 3. if, elseif, else
+### 3. if, else if, else
 
-An if structure looks like the following. Note the placement of parentheses, spaces, and braces; and that else and elseif are on the same line as the closing brace from the earlier body.
+An if structure looks like the following. Note the placement of parentheses, spaces, and braces; and that else and else if are on the same line as the closing brace from the earlier body.
 
 ```Javascript
 if (expr1) {
     // if body
-} elseif (expr2) {
-    // elseif body
+} else if (expr2) {
+    // else if body
 } else {
     // else body;
 }
-The keyword elseif SHOULD be used instead of else if so that all control keywords look like single words.
 ```
 
 ### 4. switch, case
