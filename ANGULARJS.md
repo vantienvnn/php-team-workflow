@@ -4,7 +4,7 @@
   1. [Basic Coding Standard](#basic-coding-standard)
   1. [Code Rules](#code-rules)
   1. [Code Strict Mode](#code-strict-mode)
-  1. [Angular $ Wrapper Services](#angular--rapper-services)
+  1. [Angular $ Wrapper Services](#angular--wrapper-services)
   1. [Testing](#testing)
  
 ## Directory structure and naming conventions
