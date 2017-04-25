@@ -5,17 +5,19 @@ Please following our GIT convention requirement:
 
 - Fork project repository to your GitHub account
 - Make sure you do not push, merge to project repository
-- Create one branch from test branch for each your tasks on JIRA
+- Create one branch for each your tasks on JIRA (*)
+  - Checkout from test branch for fix bug issues
+  - Checkout from develop branch for new feature issues
 - Make sure end of text files (css, js, php ...) will have one black line
 - When you do finished your task:
-  - Rebase your branch with test branch in Project Repository
+  - Rebase your branch from branch has checkout (see *) in Project Repository
   - Make sure one commit for one Pull Request ( PR )
-  - Create a PR on Github in your repostiory to test branch of project repository
-  - Name of PR should be like this format: Task {task-name}
-  - Description of PR should have JIRA task URL
+  - Create a PR on Github in your repostiory to branch has checkout (see *) of project repository
+  - Name of PR should have issues ID in Jra
+    for example: Implement SIM-1293
 - When you do created your PR:
   - If have conflict message form Github you are forgot rebase
-  - You can pick other task on waiting Simble CI checking your PR
+  - You can pick other task on waiting Simble CI checking your PR, move this task to impediment
   - Please send a message to our team group chat in Slack when the Simble CI status is succeed
   - If Simble CI status is failed
     - Check error message in link of Simble CI status
@@ -48,12 +50,12 @@ For more information, you can read [here](https://help.github.com/articles/fork-
 
 How to create new branch for each task?
 =====================
-If your task on JIRA is named are SIM 201, so you should create a branch like as:
+If Id of your task on JIRA are SIM-201, so you should create a branch like as:
 ```php
 // checkout to test branch first
 git checkout test
 // create new branch
-git checkout -b sim-201
+git checkout -b SIM-201
 // Rebase upstream test before do anything
 git fetch --all
 git rebase upstream/test
@@ -64,7 +66,7 @@ How about have one commit for PR?
 For the first commit:
 ```php
 git add .
-git commit -m "Implement task sim-201"
+git commit -m "Implement task SIM-201"
 git push origin <branch-name>
 ```
 From second commit:
