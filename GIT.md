@@ -161,6 +161,6 @@ Other Tips:
 - How to dectect missing new line in end of file?
  ![Settings Window](https://raw.github.com/vantienvnn/php-team-workflow/master/images/missing_newline.PNG)
 - How to keep your code is safe on rebase?
- - Don't commit --amend to another guys commit
- - Review your PR code after rebase
- - Check other guys PR for sure they don't change your code
+  - Don't commit --amend to another guys commit
+  - Review your PR code after rebase
+  - Check other guys PR for sure they don't change your code
